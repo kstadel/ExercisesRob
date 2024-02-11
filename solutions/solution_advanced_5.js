@@ -1,14 +1,18 @@
+const matrix = [[6,2,10], [20,30,100], [1,80,43]]
 
-const { sortingFunction } = require('../utils/sortingFunction');
+// get the smallest value out of each matrix element and store it in an array
+// check this out to find the smallest value in each
+// https://stackoverflow.com/questions/8934877/obtain-smallest-value-from-array-in-javascript
 
-const matrix = [[10,2,5],[20,4,11],[1,80,6]]
-
-let matrixSorted = []
+let smallestValues = []
 
 for(let i=0; i<matrix.length; i++){
-    matrixSorted.push(sortingFunction(matrix[i]))
+
+    min = Math.min(...matrix[i])
+    smallestValues.push(min)
+
 }
 
-console.log(matrixSorted)
+console.log(smallestValues)
 
-// expected result: [[ 2, 5, 10 ], [ 4, 11, 20 ], [ 1, 6, 80 ] ]
+// expected result: [2, 10, 1]
