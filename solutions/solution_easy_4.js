@@ -1,7 +1,4 @@
 const arr = [2,30,4,0,10,15]
-let sortedArray = []
-
-
 
 function sortedFunction(arr) {
   let sortedArr = [];
@@ -18,4 +15,6 @@ function sortedFunction(arr) {
   }
   return sortedArr;
 }
+
 console.log(sortedFunction(arr));
+module.exports = { sortedFunction };
